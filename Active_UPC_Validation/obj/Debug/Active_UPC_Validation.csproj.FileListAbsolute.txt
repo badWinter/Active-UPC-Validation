@@ -1,0 +1,8 @@
+c:\users\jake\documents\visual studio 2015\Projects\Active_UPC_Validation\Active_UPC_Validation\bin\Debug\Active_UPC_Validation.exe.config
+c:\users\jake\documents\visual studio 2015\Projects\Active_UPC_Validation\Active_UPC_Validation\bin\Debug\Active_UPC_Validation.exe
+c:\users\jake\documents\visual studio 2015\Projects\Active_UPC_Validation\Active_UPC_Validation\bin\Debug\Active_UPC_Validation.pdb
+c:\users\jake\documents\visual studio 2015\Projects\Active_UPC_Validation\Active_UPC_Validation\obj\Debug\Active_UPC_Validation.Form1.resources
+c:\users\jake\documents\visual studio 2015\Projects\Active_UPC_Validation\Active_UPC_Validation\obj\Debug\Active_UPC_Validation.Properties.Resources.resources
+c:\users\jake\documents\visual studio 2015\Projects\Active_UPC_Validation\Active_UPC_Validation\obj\Debug\Active_UPC_Validation.csproj.GenerateResource.Cache
+c:\users\jake\documents\visual studio 2015\Projects\Active_UPC_Validation\Active_UPC_Validation\obj\Debug\Active_UPC_Validation.exe
+c:\users\jake\documents\visual studio 2015\Projects\Active_UPC_Validation\Active_UPC_Validation\obj\Debug\Active_UPC_Validation.pdb

@@ -1,0 +1,15 @@
+-properly parse input fileName and storeNumber out of path picked by openFileDialog
+
+-populate output object and form fields after input file is picked; will depend on first
+ figuring out proper fileName parsing
+
+-implement outputFolderButton to change output path
+
+-implement main query methods in SpreadsheetViewModel class and implement startButton to call them
+ with proper error handeling
+
+-implement ability to update pricing sheets and link it to form's updateButton
+
+-improve error handeling and picked file/directory verification
+
+ 
