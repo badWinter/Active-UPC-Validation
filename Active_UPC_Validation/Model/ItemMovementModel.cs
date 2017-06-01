@@ -12,11 +12,11 @@ namespace Active_UPC_Validation.Model
     {
         public int StoreNumber { get; private set; }
 
-        public Dictionary<double,int> ProductMovementList { get; private set; }
+        public Dictionary<double,string> ProductMovementList { get; private set; }
 
         public ItemMovementModel(string fileName, string path) : base(fileName, path)
         {
-            ProductMovementList = new Dictionary<double, int>();
+            ProductMovementList = new Dictionary<double, string>();
             StoreNumber = 0;
         }
 
@@ -28,7 +28,7 @@ namespace Active_UPC_Validation.Model
 
         private void populateProductMovementList()
         {
-            ProductMovementList = new Dictionary<double, int>();
+            ProductMovementList = new Dictionary<double, string>();
 
             using (TextFieldParser parser = new TextFieldParser(Path))
             {
@@ -49,13 +49,14 @@ namespace Active_UPC_Validation.Model
                             if (int.Parse(fields[0]) == StoreNumber) // only add UPCs from the current store to the ProductPriceList
                             {
                                 // add to dictionary (key=UPC (string parsed to double), value=movement int)
-                                ProductMovementList.Add(double.Parse(fields[1]), int.Parse(fields[2]));
+                                ProductMovementList.Add(double.Parse(fields[1]), fields[2]);
                             }
                         }
                         catch (Exception ex)
                         {
                             if (ex is MalformedLineException || ex is FormatException)
                             {
+                                // TODO: add exception info to log
                                 continue;
                             }
                         }

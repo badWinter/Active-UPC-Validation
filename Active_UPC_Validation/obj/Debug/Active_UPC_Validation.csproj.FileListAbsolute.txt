@@ -6,3 +6,4 @@ c:\users\jake\documents\visual studio 2015\Projects\Active_UPC_Validation\Active
 c:\users\jake\documents\visual studio 2015\Projects\Active_UPC_Validation\Active_UPC_Validation\obj\Debug\Active_UPC_Validation.csproj.GenerateResource.Cache
 c:\users\jake\documents\visual studio 2015\Projects\Active_UPC_Validation\Active_UPC_Validation\obj\Debug\Active_UPC_Validation.exe
 c:\users\jake\documents\visual studio 2015\Projects\Active_UPC_Validation\Active_UPC_Validation\obj\Debug\Active_UPC_Validation.pdb
+C:\Users\Jake\Documents\Visual Studio 2015\Projects\Active_UPC_Validation\Active_UPC_Validation\obj\Debug\Active_UPC_Validation.csprojResolveAssemblyReference.cache

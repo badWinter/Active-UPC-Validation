@@ -285,6 +285,8 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.updateButton);
             this.Controls.Add(this.startButton);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Active UPC Validation";
             this.groupBox1.ResumeLayout(false);

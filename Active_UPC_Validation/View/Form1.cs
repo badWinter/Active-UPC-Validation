@@ -9,12 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Active_UPC_Validation.Model;
 using Active_UPC_Validation.ViewModel;
+using System.IO;
 
 namespace Active_UPC_Validation
 {
     public partial class Form1 : Form
     {
         SpreadsheetViewModel sheetViewModel;
+        string currentFolder = Environment.GetFolderPath(Environment.SpecialFolder.Desktop); // initialize currentFolder path as Desktop
 
         public Form1()
         {
@@ -44,7 +46,9 @@ namespace Active_UPC_Validation
             DialogResult result = openFileDialog1.ShowDialog();
             if (result == DialogResult.OK)
             {
-                importBox.Text = openFileDialog1.FileName;
+                importBox.Text = openFileDialog1.SafeFileName;
+                outputBox.Text = "Filtered__" + openFileDialog1.SafeFileName;
+                outputFolderBox.Text = Path.GetDirectoryName(openFileDialog1.FileName);
                 sheetViewModel.ImportSheet(openFileDialog1.FileName, openFileDialog1.FileName);
                 importStoreBox.Text = sheetViewModel.CurrentStore.ToString();
                 startButton.Enabled = true;
@@ -55,12 +59,17 @@ namespace Active_UPC_Validation
         {
             // TODO:
             // call folderBrowserDialog to chose a new directory to save output to
+
+
+
         }
 
         private void startButton_Click(object sender, EventArgs e)
         {
             // TODO:
             // call spreadsheetViewModel's GenerateValidationList method
+            sheetViewModel.GenerateValidationList(outputBox.Text, outputFolderBox.Text + "\\" + outputBox.Text);
+
         }
 
         private void updateButton_Click(object sender, EventArgs e)

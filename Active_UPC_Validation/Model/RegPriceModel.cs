@@ -58,6 +58,7 @@ namespace Active_UPC_Validation.Model
                         {
                             if (ex is MalformedLineException || ex is FormatException)
                             {
+                                // TODO: add exception info to log
                                 continue;
                             }
                         }

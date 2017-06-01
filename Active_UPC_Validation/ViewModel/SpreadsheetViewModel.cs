@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Active_UPC_Validation.Model;
-
+using System.Windows.Forms;
 
 namespace Active_UPC_Validation.ViewModel
 {
@@ -43,11 +43,30 @@ namespace Active_UPC_Validation.ViewModel
             UpdatePricingSheets();
         }
 
-        public void GenerateValidationList()
+
+        public void GenerateValidationList(string fileName, string path)
         {
             // TODO:
             // create a query to check items in ActiveItemModel dict against items in Catalog, RegPrice, and ItemMovement
             // stick results into output object and write out to a new file
+            output = new OutputModel(fileName, path);
+
+            if (activeItem != null)
+            {
+                foreach (double upc in activeItem.UpcList)
+                {
+                    if (!(catalog.ProductList.ContainsKey(upc) || regPrice.ProductPriceList.ContainsKey(upc) || itemMovement.ProductMovementList.ContainsKey(upc)))
+                    {
+                        output.AppendCsvOutput(upc.ToString());
+                    }
+                }
+            }
+
+            if (output.CsvOutput == "")
+                MessageBox.Show("No invalid upcs found; no output file will be written");
+            else 
+                output.WriteOutput();
+
         }
 
     }
